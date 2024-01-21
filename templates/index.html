@@ -1,0 +1,46 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #violet-button {
+            background-color: #8a2be2; /* Violeta */
+            color: white;
+        }
+
+        #green-button {
+            background-color: #556b2f; /* Verde musgo */
+            color: white;
+        }
+    </style>
+    <title>Menú Principal</title>
+</head>
+<body>
+    <h1>Menú Principal</h1>
+    <div class="button-container">
+        <a href="{{ url_for('ejercicio1') }}"><button id="violet-button">Ejercicio 1</button></a>
+        <a href="{{ url_for('ejercicio2') }}"><button id="green-button">Ejercicio 2</button></a>
+    </div>
+</body>
+</html>

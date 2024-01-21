@@ -1,0 +1,77 @@
+<!-- ejercicio2.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #0000FF; /* Azul */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0000FF; /* Azul */
+            font-size: 18px;
+        }
+    </style>
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <h1>Inicio de Sesión</h1>
+
+    <form method="POST">
+        <label for="usuario">Ingresa tu nombre:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <label for="contrasena">Ingresa tu contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <br>
+        {% if mensaje is defined %}
+            <p>{{ mensaje }}</p>
+        {% endif %}
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <a href="/"><button style="background-color: #0000FF; color: white;">Volver al Menú Principal</button></a>
+</body>
+</html>
